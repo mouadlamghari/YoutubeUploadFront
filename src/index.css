@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer{
+  .active{
+    background-color: rgb(253, 110, 110);
+    & span{
+      color: #fff !important;
+    }
+  }
+  .button{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+  }
+  
+}
