@@ -1,12 +1,13 @@
 import React from 'react'
-import UseGetListChannel from '../../Utils/UseGetListChannel'
+import UseGetListVideos from '../../Utils/UseGetListVideos'
+import VideoCard from './VideoCard'
 
 const ListVideo = () => {
-    const [channels,error,loading]=UseGetListChannel()
-    console.log(channels,error,loading)
+    const [videos,error,loading]=UseGetListVideos()
+    console.log(videos,error,loading)
   return (
-    <div>
-
+    <div className=' grid grid-cols-3 ' >
+      {videos?.map(video=> <VideoCard {...video} /> )}
     </div>
   )
 }

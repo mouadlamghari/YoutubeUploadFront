@@ -3,6 +3,7 @@ import NavbarYoutuber from '../Components/Youtuber/NavbarYoutuber'
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import Videos from './Videos'
+import Editors from './Editors'
 
 const Youtuber = () => {
   return (
@@ -11,6 +12,7 @@ const Youtuber = () => {
         <Routes>
             <Route index element={<Dashboard/>} />
             <Route path='/Videos' element={<Videos/>} />
+            <Route path='/Editors' element={<Editors/>} />
         </Routes>
     </div>
   )

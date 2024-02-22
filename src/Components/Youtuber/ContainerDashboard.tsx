@@ -11,7 +11,7 @@ import Card from "./Card"
 const ContainerDashboard = () => {
     const cards = [
         {bg:"#e83545",title:"Videos",icone:<Videos/>,custom:" row-span-2 col-span-2"},
-        {bg:"blue",title:"Editor",icone:<Editor/>,},
+        {bg:"blue",title:"Editors",icone:<Editor/>,},
         {bg:"green",title:"Channels",icone:<Channel/>},
         {bg:"yellow",title:"Actions",icone:<Actions/>,custom:"col-span-2"},
         {bg:"yellow",title:"Statique",icone:<Statistisue/>,custom:"col-span-4"},

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
-const UseGetListChannel = () => {
+const UseGetListVideos = () => {
     const [channels,setChannels]=useState()
-    const [err,setErr]=useState()
-    const [loading,setLoading]=useState()
+    const [err,setErr]=useState("")
+    const [loading,setLoading]=useState(false)
     useEffect(()=>{
         (async()=>{
             try{
@@ -12,9 +12,9 @@ const UseGetListChannel = () => {
                 headers.append('Content-Type','application/json')
                 const req = await fetch('http://localhost:3000/ressource/videos',{headers,credentials:"include"})
                 const res = await req.json();
-                setChannels(res)
+                setChannels(res.data)
             }catch(err){
-                setErr(err)
+                setErr(err.message)
             }finally{
                 setLoading(false)
             }
@@ -23,4 +23,4 @@ const UseGetListChannel = () => {
   return [channels,err,loading];
 }
 
-export default UseGetListChannel
+export default UseGetListVideos
